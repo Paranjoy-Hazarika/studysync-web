@@ -6,29 +6,63 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link href="/src/style.css" rel="stylesheet">
 </head>
-<body>
-  <!-- Profile Header -->
-  <header>
-    <!-- Profile Banner -->
-    <div>
-    </div>
-    <div>
-      <!-- Profile Pic -->
-      <div>
-        <img src="src/javascript.svg" alt="">
-      </div>
-      
-      <!-- Profile Details -->
-      <div>
-        <h1>JavaScript</h1>
-        <p>JavaScript is a versatile programming language commonly used in web development to create interactive effects within web browsers. It is a high-level, interpreted language that supports object-oriented, imperative, and functional programming styles.</p>
-      </div>
-    </div>
-  </header>
+<body class="flex flex-col max-h-screen">
 
   <!-- Main Section -->
-  <main>
+  <main class="w-full min-h-screen flex flex-col justify-between pb-15">
 
+    <!-- Profile Section -->
+    <section>
+      <!-- Profile Pic -->
+      <div>
+        <div class="banner min-w-screen -mb-25"></div>
+      </div>
+
+    </section>
+    
+    <!-- Content Section -->
+    <section class="flex flex-col justify-center gap-10 py-5 w-full">
+       <!-- Profile Details -->
+       <div class="flex align-middle gap-5 py-5 px-18">
+         <div class="h-40 w-40 rounded-2xl bg-center bg-cover bg-no-repeat bg-[url('https://i.pinimg.com/736x/13/fd/e7/13fde7085f664054eaa1389b372ec521.jpg')] border-2 border-amber-50"></div>
+   
+         <!-- Profile Text -->
+         <div class="h-fit mt-22">
+           <h1 class="text-3xl pt-5">Hi! JavaScript</h1>
+         </div>
+   
+       </div>
+        
+        <!-- Notes and Classes -->
+        <div class="w-full flex justify-center gap-5">
+
+          <!-- Notes Section -->
+          <div class="bg-amber-50 p-5 rounded-4xl">
+            <img id="card-img" src="https://i.pinimg.com/736x/e4/85/a3/e485a32641f8fdef26ea83ea06472834.jpg" alt="">
+            <!-- <div class="bg-[url('https://i.pinimg.com/736x/e4/85/a3/e485a32641f8fdef26ea83ea06472834.jpg')] h-80 bg-cover bg-no-repeat bg-bottom"></div> -->
+            <h2 class="text-zinc-800">Notes</h2>
+          </div>
+
+          <!-- Class Schedule Section -->
+          <div class="bg-amber-50 p-5 rounded-4xl">
+            <img id="card-img" src="https://i.pinimg.com/736x/14/3f/89/143f8939dd713a224c32adc919b82b20.jpg" alt="">
+            <h2 class="text-zinc-800">Classes</h2>
+          </div>
+          
+          <!-- Attendance Section -->
+          <div class="bg-amber-50 p-5 rounded-4xl">
+            <img id="card-img" src="https://i.pinimg.com/736x/5b/4a/26/5b4a2667f8ae8c06f1296ec18a2435f0.jpg" alt="">
+            <h2 class="text-zinc-800">Attendance</h2>
+          </div>
+          
+          <!-- To-Do Section -->
+          <div class="bg-amber-50 p-5 rounded-4xl">
+            <img id="card-img" src="https://i.pinimg.com/736x/f8/8a/35/f88a35bfe079f783f360ee764ef26b0b.jpg" alt="">
+            <h2 class="text-zinc-800">To-Do</h2>
+          </div>
+        </div>
+
+    </section>
   </main>
 </body>
 </html>
