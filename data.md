@@ -1,0 +1,1 @@
+make the icons for the folders and files at around 55px max

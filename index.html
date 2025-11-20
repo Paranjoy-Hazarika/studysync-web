@@ -11,32 +11,11 @@
   <!-- Main Section -->
   <main class="relative w-full min-h-screen flex flex-col justify-between pb-15">
 
-    <!-- Card Section -->
-    <section class="card-section flex flex-col justify-center items-center gap-10 absolute w-full min-h-screen z-50 backdrop-blur-sm top-0 bg-[rgba(200,200,200,0.2)] ">
-      
-      <div class="bg-amber-100 rounded-lg w-full max-w-120 h-full max-h-96 min-h-[150px] p-7 flex flex-col gap-10">
-        <div class="flex justify-between items-center -my-3">
-          <h6 class="text-zinc-700 text-2xl">Notes</h6>
-          <i class="bi bi-x w- 50 text-zinc-800 text-[30px]"></i>
-        </div>
+    <!-- Card Overlay Section -->
+    <section class="card-section flex flex-col justify-center items-center gap-10 absolute w-full min-h-screen z-50 backdrop-blur-sm top-0 bg-[rgba(200,200,200,0.2)] invisible">
+      <div class="section-window bg-amber-100 rounded-lg w-full max-w-130 h-full max-h-[450px] min-h-[150px] p-7 pr-5 flex flex-col gap-10 scale-0 transition-all duration-100 ease-in-out">
 
-        <div class="flex justify-start items-center gap-10 flex-wrap">
-          <img src="src/icons-folder.svg" alt="icon-img" class="scale-130">
-          <img src="src/icons-folder.svg" alt="icon-img" class="scale-130">
-          <img src="src/icons-folder.svg" alt="icon-img" class="scale-130">
-          <img src="src/icons-folder.svg" alt="icon-img" class="scale-130">
-          <img src="src/icons-folder.svg" alt="icon-img" class="scale-130">
-          <img src="src/icons-folder.svg" alt="icon-img" class="scale-130">
-          <img src="src/icons-folder.svg" alt="icon-img" class="scale-130">
-          <img src="src/icons-folder.svg" alt="icon-img" class="scale-130">
-          <img src="src/icons-folder.svg" alt="icon-img" class="scale-130">
-          <img src="src/icons-folder.svg" alt="icon-img" class="scale-130">
-          <img src="src/icons-folder.svg" alt="icon-img" class="scale-130">
-          <img src="src/icons-folder.svg" alt="icon-img" class="scale-130">
-          <img src="src/icons-folder.svg" alt="icon-img" class="scale-130">
-          <img src="src/icons-folder.svg" alt="icon-img" class="scale-130">
-          <img src="src/icons-folder.svg" alt="icon-img" class="scale-130">
-        </div>
+
       </div>
     </section>
 
@@ -55,7 +34,7 @@
           
           <form id="banner-form" class="invisible opacity-0 peer-focus:opacity-100 peer-focus:visible group-focus-within:visible group-focus-within:opacity-100 absolute right-2.5 top-18 rounded-lg bg-neutral-900 z-12 transition duration-150 ease-in-out">
             <input
-              class="p-2 text-[14px] placeholder:italic"
+              class="p-4 text-[12px] placeholder:italic"
               type="text"
               placeholder="Paste the link here"
               id="banner-input"
@@ -88,7 +67,7 @@
    
          <!-- Profile Text -->
          <div class="h-fit mt-22">
-           <h1 class="text-3xl pt-5">Hi, Paranjoy</h1>
+           <h1 class="text-3xl pt-5"><span class="welcome-msg">Hi</span>, Paranjoy</h1>
          </div>
          
         </div>
@@ -97,33 +76,33 @@
         <div class="w-full flex justify-center gap-5">
 
           <!-- Notes Section -->
-          <div class="card" data-type="notes">
+          <div class="card flex flex-col gap-2" data-type="notes">
             <img id="card-img" src="https://i.pinimg.com/736x/e4/85/a3/e485a32641f8fdef26ea83ea06472834.jpg" alt="">
-            <h2 class="text-zinc-800">Notes</h2>
+            <h2 class="text-zinc-800 text-xl">Notes</h2>
           </div>
 
           <!-- Class Schedule Section -->
-          <div class="card" data-type="classes">
+          <div class="card flex flex-col gap-2" data-type="classes">
             <img id="card-img" src="https://i.pinimg.com/736x/14/3f/89/143f8939dd713a224c32adc919b82b20.jpg" alt="">
-            <h2 class="text-zinc-800">Classes</h2>
+            <h2 class="text-zinc-800 text-xl">Classes</h2>
           </div>
           
           <!-- Attendance Section -->
-          <div class="card" data-type="attendance">
+          <div class="card flex flex-col gap-2" data-type="attendance">
             <img id="card-img" src="https://i.pinimg.com/736x/5b/4a/26/5b4a2667f8ae8c06f1296ec18a2435f0.jpg" alt="">
-            <h2 class="text-zinc-800">Attendance</h2>
+            <h2 class="text-zinc-800 text-xl">Attendance</h2>
           </div>
           
           <!-- To-Do Section -->
-          <div class="card" data-type="todo">
+          <div class="card flex flex-col gap-2" data-type="todo">
             <img id="card-img" src="https://i.pinimg.com/736x/f8/8a/35/f88a35bfe079f783f360ee764ef26b0b.jpg" alt="">
-            <h2 class="text-zinc-800">To-Do</h2>
+            <h2 class="text-zinc-800 text-xl">To-Do</h2>
           </div>
         </div>
 
     </section>
   </main>
 
-  <script src="src/main.js" type="module"></script>
+  <script src="src/scripts/main.js" type="module"></script>
 </body>
 </html>
