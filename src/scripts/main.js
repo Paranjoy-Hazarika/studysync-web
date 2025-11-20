@@ -1,6 +1,15 @@
 import '/src/style.css'
 import '/node_modules/bootstrap-icons/font/bootstrap-icons.css';
-import { notesHTML, attendanceHTML, scheduleHTML, todosHTML } from './cardTemplates';
+import { cardContents } from './cardTemplates';
+
+const invalidContent = `
+<div class="flex justify-between items-center -my-3 pr-2">
+    <h6 class="text-zinc-700 text-2xl">Invalid</h6>
+    <i class="close-btn bi bi-x w- 50 text-zinc-800 text-[30px] hover:cursor-pointer"></i>
+</div>
+
+<p class="text-zinc-700">Invalid Input</p>
+`
 
 // Cards
 const cards = document.querySelectorAll(".card")
@@ -19,10 +28,7 @@ cards.forEach(card => {
   card.addEventListener("click", () => {
     const type = card.dataset.type;
 
-    if (type === "notes") overlayWindow.innerHTML = notesHTML;
-    if (type === "attendance") overlayWindow.innerHTML = attendanceHTML;
-    if (type === "classes") overlayWindow.innerHTML = scheduleHTML;
-    if (type === "todo") overlayWindow.innerHTML = todosHTML;
+    overlayWindow.innerHTML = cardContents[type] || invalidContent;
 
     openOverlay();
 

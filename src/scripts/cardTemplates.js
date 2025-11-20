@@ -1,4 +1,5 @@
-export const notesHTML = `
+export const cardContents = {
+    notes: `
     <!-- Card Overlay Header -->
     <div class="flex justify-between items-center -my-3 pr-2">
         <h6 class="text-zinc-700 text-2xl">Notes</h6>
@@ -39,28 +40,28 @@ export const notesHTML = `
         </div>
         
     </div>
-`;
-
-export const attendanceHTML = `
+`,
+attendances : `
 <div class="flex justify-between items-center -my-3 pr-2">
     <h6 class="text-zinc-700 text-2xl">Attendance</h6>
     <i class="close-btn bi bi-x w- 50 text-zinc-800 text-[30px] hover:cursor-pointer"></i>
 </div>
 <p class="text-zinc-700">Attendance stuff here...</p>
-`;
+`,
 
-export const scheduleHTML = `
+classes : `
 <div class="flex justify-between items-center -my-3 pr-2">
     <h6 class="text-zinc-700 text-2xl">Class Schedule</h6>
     <i class="close-btn bi bi-x w- 50 text-zinc-800 text-[30px] hover:cursor-pointer"></i>
 </div>
 <p class="text-zinc-700">Schedule goes here...</p>
-`;
+`,
 
-export const todosHTML = `
+todo : `
 <div class="flex justify-between items-center -my-3 pr-2">
     <h6 class="text-zinc-700 text-2xl">To-Do</h6>
     <i class="close-btn bi bi-x w- 50 text-zinc-800 text-[30px] hover:cursor-pointer"></i>
 </div>
 <p class="text-zinc-700">Todo list...</p>
-`;
+`
+}
