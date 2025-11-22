@@ -17,91 +17,8 @@
     <main class="relative w-full min-h-screen flex flex-col justify-between pb-15">
 
       <!-- Card Overlay Section -->
-      <section class="card-section flex flex-col justify-center items-center gap-10 absolute w-full min-h-screen z-50 backdrop-blur-sm top-0 bg-[rgba(200,200,200,0.2)]">
-        <div class="section-window bg-amber-100 rounded-lg w-full max-w-fit h-full max-h-[450px] min-h-[150px] p-7 pr-5 flex flex-col gap-10 transition-all duration-100 ease-in-out">
-          
-          <!-- Schedule Header -->
-          <div class="flex justify-between items-center -my-3 pr-2">
-            <h6 class="text-zinc-700 text-2xl">Class Schedule</h6>
-            <i class="close-btn bi bi-x w- 50 text-zinc-800 text-[30px] hover:cursor-pointer"></i>
-          </div>
-          
-          <!-- Schedule Content -->
-          <div class="pr-2 flex flex-col gap-8">
-            <div class="flex flex-col gap-4">
-              <h2 class="text-zinc-800 text-xl font-bold">Monday</h2>
-
-              <div class="flex gap-4">
-                <div class="bg-amber-50 p-4 w-full max-w-35 rounded-xl shadow-sm">
-                  <h3 class="font-semibold text-lg text-zinc-800">Physics</h3>
-                  <p class="text-sm text-zinc-600">Monday — 9:30 AM</p>
-                </div>
-    
-                <div class="bg-amber-50 p-4 w-full max-w-35 rounded-xl shadow-sm">
-                  <h3 class="font-semibold text-lg text-zinc-800">Math</h3>
-                  <p class="text-sm text-zinc-600">Monday — 11:00 AM</p>
-                </div>
-
-                <div class="bg-amber-50 p-4 w-full max-w-35 rounded-xl shadow-sm">
-                  <h3 class="font-semibold text-lg text-zinc-800">Math</h3>
-                  <p class="text-sm text-zinc-600">Monday — 11:00 AM</p>
-                </div>
-
-                <div class="bg-amber-50 p-4 w-full max-w-35 rounded-xl shadow-sm">
-                  <h3 class="font-semibold text-lg text-zinc-800">Math</h3>
-                  <p class="text-sm text-zinc-600">Monday — 11:00 AM</p>
-                </div>
-
-                <div class="bg-amber-50 p-4 w-full max-w-35 rounded-xl shadow-sm">
-                  <h3 class="font-semibold text-lg text-zinc-800">Math</h3>
-                  <p class="text-sm text-zinc-600">Monday — 11:00 AM</p>
-                </div>
-
-                <div class="bg-amber-50 p-4 w-full max-w-35 rounded-xl shadow-sm">
-                  <h3 class="font-semibold text-lg text-zinc-800">Math</h3>
-                  <p class="text-sm text-zinc-600">Monday — 11:00 AM</p>
-                </div>
-              </div>
-
-            </div>
-
-            <div class="flex flex-col gap-4">
-              <h2 class="text-zinc-800 text-xl font-bold">Monday</h2>
-
-              <div class="flex gap-4">
-                <div class="bg-amber-50 p-4 w-full max-w-35 rounded-xl shadow-sm">
-                  <h3 class="font-semibold text-lg text-zinc-800">Physics</h3>
-                  <p class="text-sm text-zinc-600">Monday — 9:30 AM</p>
-                </div>
-    
-                <div class="bg-amber-50 p-4 w-full max-w-35 rounded-xl shadow-sm">
-                  <h3 class="font-semibold text-lg text-zinc-800">Math</h3>
-                  <p class="text-sm text-zinc-600">Monday — 11:00 AM</p>
-                </div>
-
-                <div class="bg-amber-50 p-4 w-full max-w-35 rounded-xl shadow-sm">
-                  <h3 class="font-semibold text-lg text-zinc-800">Math</h3>
-                  <p class="text-sm text-zinc-600">Monday — 11:00 AM</p>
-                </div>
-
-                <div class="bg-amber-50 p-4 w-full max-w-35 rounded-xl shadow-sm">
-                  <h3 class="font-semibold text-lg text-zinc-800">Math</h3>
-                  <p class="text-sm text-zinc-600">Monday — 11:00 AM</p>
-                </div>
-
-                <div class="bg-amber-50 p-4 w-full max-w-35 rounded-xl shadow-sm">
-                  <h3 class="font-semibold text-lg text-zinc-800">Math</h3>
-                  <p class="text-sm text-zinc-600">Monday — 11:00 AM</p>
-                </div>
-
-                <div class="bg-amber-50 p-4 w-full max-w-35 rounded-xl shadow-sm">
-                  <h3 class="font-semibold text-lg text-zinc-800">Math</h3>
-                  <p class="text-sm text-zinc-600">Monday — 11:00 AM</p>
-                </div>
-              </div>
-
-            </div>
-          </div>
+      <section class="card-section flex flex-col justify-center items-center gap-10 absolute w-full min-h-screen z-50 backdrop-blur-sm top-0 bg-[rgba(200,200,200,0.2)] invisible">
+        <div class="section-window bg-amber-100 rounded-lg p-7 pr-5 flex flex-col gap-10 transition-all duration-100 ease-in-out">
 
         </div>
       </section>
@@ -117,7 +34,8 @@
         <div>
           <div class="h-[200px] min-w-screen -mb-25 bg-center bg-cover bg-no-repeat bg-[url('https://i.pinimg.com/originals/ca/26/2e/ca262e0354eea311c41134c3e4bc3bc2.gif')] group relative z-5">
             
-            <p class="w-fit bg-zinc-800 text-[14px] p-4 absolute right-2.5 top-2.5 rounded-lg invisible opacity-0 group-hover:visible group-hover:opacity-100 hover:cursor-pointer peer transition duration-300 ease-in-out" tabindex="0">change cover</p>
+            <!-- Banner Change Button -->
+            <p class="w-fit bg-zinc-800 text-[14px] p-4 absolute right-2.5 top-2.5 rounded-lg invisible opacity-0 group-hover:visible group-hover:opacity-100 hover:cursor-pointer peer transition duration-300 ease-in-out" tabindex="0" title="Change Banner">change cover</p>
             
             <form id="banner-form" class="invisible opacity-0 peer-focus:opacity-100 peer-focus:visible group-focus-within:visible group-focus-within:opacity-100 absolute right-2.5 top-18 rounded-lg bg-neutral-900 z-12 transition duration-150 ease-in-out">
               <input
@@ -138,7 +56,7 @@
         <div class="flex align-middle gap-5 py-5 px-18 relative group">
 
           <!-- Profile Pic -->
-          <div class="h-40 w-30 rounded-2xl bg-center bg-cover bg-no-repeat bg-[url('https://i.pinimg.com/736x/13/fd/e7/13fde7085f664054eaa1389b372ec521.jpg')] border-2 border-amber-50 z-10 hover:cursor-pointer hover:shadow-[0_0_20px_rgba(24,24,24,0.25)] transition duration-300 ease-in-out peer" tabindex="0" id="profile-pic"></div>
+          <div class="h-40 w-30 rounded-2xl bg-center bg-cover bg-no-repeat bg-[url('https://i.pinimg.com/736x/13/fd/e7/13fde7085f664054eaa1389b372ec521.jpg')] border-2 border-amber-50 z-10 hover:cursor-pointer hover:shadow-[0_0_20px_rgba(24,24,24,0.25)] transition duration-300 ease-in-out peer" tabindex="0" id="profile-pic" title="Change Profile"></div>
 
           <div class="absolute w-fit invisible opacity-0 text-zinc-800 bg-neutral-900 -bottom-22 p-4 rounded-2xl flex flex-col gap-2 z-12 shadow-[0_0_25px_rgba(24,24,24,0.25)] peer-focus:visible peer-focus:opacity-100 group-focus-within:opacity-100 group-focus-within:visible transition duration-150 ease-in-out">
             <p class="text-white">Upload</p>
@@ -151,10 +69,10 @@
                 >
             </form>
           </div>
-    
+
           <!-- Profile Text -->
           <div class="h-fit mt-22">
-            <h1 class="text-3xl pt-5"><span class="welcome-msg">Hi</span>, <span class="profile-name hover:underline hover:cursor-pointer font-semibold">Paranjoy</span></h1>
+            <h1 class="text-3xl pt-5"><span class="welcome-msg">Hi</span>, <span class="profile-name hover:underline hover:cursor-pointer font-semibold" title="Change Name">Paranjoy</span></h1>
           </div>
           
           </div>

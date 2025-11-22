@@ -25,28 +25,51 @@ const profilePic = document.getElementById("profile-pic")
 const welcomeMsg = document.querySelector(".welcome-msg")
 const msgArray = ["Sup", "Morning", "Wassup", "Hi", "Hola"];
 
-// cards.forEach(card => {
-//   card.addEventListener("click", () => {
-//     const type = card.dataset.type;
+cards.forEach(card => {
+  card.addEventListener("click", () => {
+    const type = card.dataset.type;
 
-//     overlayWindow.innerHTML = cardContents[type] || invalidContent;
+    const innerContent = cardContents[type] || invalidContent;
 
-//     openOverlay();
+    openOverlay();
 
-//     if (type === "notes") {
-//       const newFile = document.querySelector(".files-section")
-//       const addFileHtml = `
-//         <div class="-mt-5 hover:cursor-pointer min-w-[50px] text-center" title="Add new">
-//           <i class="bi bi-plus-circle w- 50 text-zinc-800 text-[30px] hover:text-zinc-500 transition-all duration-300"></i>;
-//         </div>
-//       `
-//       newFile.insertAdjacentHTML("beforeend",addFileHtml)
-//     }
+    switch (type)  {
+      case "notes": 
+        overlayWindow.classList.add("layout-notes");
+        overlayWindow.innerHTML = innerContent;
 
-//     const closeBtn = document.querySelector(".close-btn")
-//     closeBtn.addEventListener("click", closeOverlay);
-//   });
-// });
+        const newFile = document.querySelector(".files-section");
+        const addFileHtml = `
+          <div class="-mt-5 hover:cursor-pointer min-w-[50px] text-center" title="Add new">
+            <i class="bi bi-plus-circle w- 50 text-zinc-800 text-[30px] hover:text-zinc-500 transition-all duration-300"></i>;
+          </div>
+        `;
+        newFile.insertAdjacentHTML("beforeend",addFileHtml);
+        break
+      
+      case "classes":
+        overlayWindow.classList.add("layout-schedule");
+        overlayWindow.innerHTML = innerContent;
+
+        break
+
+      case "attendance":
+        overlayWindow.classList.add("layout-attendance");
+        overlayWindow.innerHTML = innerContent;
+
+        break
+
+      case "todo":
+        overlayWindow.classList.add("layout-todo");
+        overlayWindow.innerHTML = innerContent;
+
+        break
+    }
+
+    const closeBtn = document.querySelector(".close-btn")
+    closeBtn.addEventListener("click", closeOverlay);
+  });
+});
 
 
 function openOverlay() {
@@ -57,9 +80,22 @@ function openOverlay() {
 
 function closeOverlay() {
   overlay.classList.add("invisible");
-  overlayWindow.classList.add("scale-0");
   overlayWindow.classList.remove("scale-100");
-  // overlayWindow.innerHTML = ""
+  overlayWindow.classList.add("scale-0");
+  setTimeout(() => {
+    overlay.classList.add("invisible");
+    rmOverlayContent();
+    overlayWindow.innerHTML = "";
+  }, 120);
+ }
+
+function rmOverlayContent() {
+  overlayWindow.classList.remove(
+    "layout-notes",
+    "layout-schedule",
+    "layout-attendance",
+    "layout-todo"
+  )
 }
 
 // Profile Pic Updating
