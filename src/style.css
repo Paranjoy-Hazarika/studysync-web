@@ -53,8 +53,16 @@ body {
   @apply w-full max-w-fit h-full max-h-fit min-h-[150px];
 }
 
+.layout-attendance {
+  @apply w-full max-w-130 h-full max-h-115 min-h-[150px];
+}
+
+.layout-todo {
+  @apply w-full max-w-130 h-full max-h-115 min-h-[150px];
+}
+
 .loading-pfp {
-  background: linear-gradient(90deg, #e2e2e2, #7b7b7b, #252525);
+  background: linear-gradient(90deg, #7b7b7b, #252525, #7b7b7b);
   background-size: 400% 400%;
   animation: shimmer 2s infinite;
 }

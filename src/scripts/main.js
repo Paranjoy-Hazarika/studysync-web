@@ -21,6 +21,11 @@ const profileInput = document.getElementById("profile-link-input")
 const profileForm = document.getElementById("profile-link")
 const profilePic = document.getElementById("profile-pic")
 
+// Banner DOMs
+const bannerInput = document.getElementById("banner-input")
+const bannerForm = document.getElementById("banner-form")
+const bannerPic = document.getElementById("banner-pic")
+
 // Welcome DOMs
 const welcomeMsg = document.querySelector(".welcome-msg")
 const msgArray = ["Sup", "Morning", "Wassup", "Hi", "Hola"];
@@ -44,7 +49,8 @@ cards.forEach(card => {
             <i class="bi bi-plus-circle w- 50 text-zinc-800 text-[30px] hover:text-zinc-500 transition-all duration-300"></i>;
           </div>
         `;
-        newFile.insertAdjacentHTML("beforeend",addFileHtml);
+        newFile.insertAdjacentHTML("beforeend", addFileHtml);
+
         break
       
       case "classes":
@@ -79,9 +85,9 @@ function openOverlay() {
 }
 
 function closeOverlay() {
-  overlay.classList.add("invisible");
   overlayWindow.classList.remove("scale-100");
   overlayWindow.classList.add("scale-0");
+
   setTimeout(() => {
     overlay.classList.add("invisible");
     rmOverlayContent();
@@ -123,7 +129,32 @@ profileForm.addEventListener("submit", (e) => {
   profileInput.value = "";
 })
 
+// Banner Update Logic
+bannerForm.addEventListener("submit", (e) => {
+  e.preventDefault();
 
+  const link = bannerInput.value;
+  if (!link) return;
+
+  bannerPic.classList.add("loading-pfp");
+
+  const newImg = new Image();
+  newImg.src = link;
+
+  newImg.onload= () => {
+    bannerPic.style.backgroundImage = `url(${link})`;
+    bannerPic.classList.remove("loading-pfp");
+  }
+
+  newImg.onerror= () => {
+    alert("Image failed to load");
+    bannerPic.classList.remove("loading-pfp");
+  }
+
+  bannerInput.value = "";
+})
+
+// Changing the welcome messages overtime
 setInterval(() => {
   const randomElem = Math.floor(Math.random() * msgArray.length);
   welcomeMsg.textContent = msgArray[randomElem];
