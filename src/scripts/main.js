@@ -11,31 +11,42 @@ const invalidContent = `
 <p class="text-zinc-700">Invalid Input</p>
 `
 
-// Cards
+// Cards DOMs
 const cards = document.querySelectorAll(".card")
 const overlay = document.querySelector(".card-section")
-// const closeBtn = document.querySelector(".close-btn")
 const overlayWindow = document.querySelector(".section-window")
 
+// Profile DOMs
 const profileInput = document.getElementById("profile-link-input")
 const profileForm = document.getElementById("profile-link")
 const profilePic = document.getElementById("profile-pic")
 
+// Welcome DOMs
 const welcomeMsg = document.querySelector(".welcome-msg")
 const msgArray = ["Sup", "Morning", "Wassup", "Hi", "Hola"];
 
-cards.forEach(card => {
-  card.addEventListener("click", () => {
-    const type = card.dataset.type;
+// cards.forEach(card => {
+//   card.addEventListener("click", () => {
+//     const type = card.dataset.type;
 
-    overlayWindow.innerHTML = cardContents[type] || invalidContent;
+//     overlayWindow.innerHTML = cardContents[type] || invalidContent;
 
-    openOverlay();
+//     openOverlay();
 
-    const closeBtn = document.querySelector(".close-btn")
-    closeBtn.addEventListener("click", closeOverlay);
-  });
-});
+//     if (type === "notes") {
+//       const newFile = document.querySelector(".files-section")
+//       const addFileHtml = `
+//         <div class="-mt-5 hover:cursor-pointer min-w-[50px] text-center" title="Add new">
+//           <i class="bi bi-plus-circle w- 50 text-zinc-800 text-[30px] hover:text-zinc-500 transition-all duration-300"></i>;
+//         </div>
+//       `
+//       newFile.insertAdjacentHTML("beforeend",addFileHtml)
+//     }
+
+//     const closeBtn = document.querySelector(".close-btn")
+//     closeBtn.addEventListener("click", closeOverlay);
+//   });
+// });
 
 
 function openOverlay() {
@@ -48,14 +59,30 @@ function closeOverlay() {
   overlay.classList.add("invisible");
   overlayWindow.classList.add("scale-0");
   overlayWindow.classList.remove("scale-100");
+  // overlayWindow.innerHTML = ""
 }
 
-
+// Profile Pic Updating
 profileForm.addEventListener("submit", (e) => {
   e.preventDefault()
 
   const link = profileInput.value;
-  profilePic.style.backgroundImage = `url(${link})`;
+  if (!link) return;
+
+  profilePic.classList.add("loading-pfp");
+
+  const newImg = new Image();
+  newImg.src = link;
+
+  newImg.onload = () => {
+    profilePic.style.backgroundImage = `url(${link})`;
+    profilePic.classList.remove("loading-pfp");
+  };
+
+  newImg.onerror = () => {
+    alert("Image failed to load");
+    profilePic.classList.remove("loading-pfp");
+  }
 
   profileInput.value = "";
 })
@@ -63,6 +90,5 @@ profileForm.addEventListener("submit", (e) => {
 
 setInterval(() => {
   const randomElem = Math.floor(Math.random() * msgArray.length);
-  console.log(msgArray[randomElem])
   welcomeMsg.textContent = msgArray[randomElem];
 }, 300000);
