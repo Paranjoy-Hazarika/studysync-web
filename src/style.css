@@ -54,7 +54,7 @@ body {
 }
 
 .layout-attendance {
-  @apply w-full max-w-130 h-full max-h-115 min-h-[150px];
+  @apply w-full max-w-185 h-full max-h-115 min-h-[150px];
 }
 
 .layout-todo {

@@ -59,7 +59,7 @@ classes : `
 <!-- Schedule Content -->
 <div class="pr-2 flex flex-col gap-5">
     <div class="flex flex-col gap-4">
-        <h2 class="text-zinc-800 text-xl font-semibold">Monday</h2>
+        <h2 class="text-zinc-800 text-xl font-semibold hover:cursor-pointer">Monday</h2>
 
         <div class="flex gap-4">
             <div class="bg-amber-50 p-4 w-full max-w-35 rounded-xl shadow-sm">
@@ -95,7 +95,7 @@ classes : `
     </div>
 
     <div class="flex flex-col gap-4">
-        <h2 class="text-zinc-800 text-xl font-semibold">Tuesday</h2>
+        <h2 class="text-zinc-800 text-xl font-semibold hover:cursor-pointer">Tuesday</h2>
 
         <div class="flex gap-4">
             <div class="bg-amber-50 p-4 w-full max-w-35 rounded-xl shadow-sm">
@@ -122,7 +122,7 @@ classes : `
     </div>
 
     <div class="flex flex-col gap-4">
-        <h2 class="text-zinc-800 text-xl font-semibold">Wednesday</h2>
+        <h2 class="text-zinc-800 text-xl font-semibold hover:cursor-pointer">Wednesday</h2>
 
         <div class="flex gap-4">
             <div class="bg-amber-50 p-4 w-full max-w-35 rounded-xl shadow-sm">
@@ -161,7 +161,41 @@ attendance : `
     <h6 class="text-zinc-700 text-2xl">Attendance</h6>
     <i class="close-btn bi bi-x w- 50 text-zinc-800 text-[30px] hover:cursor-pointer"></i>
 </div>
-<p class="text-zinc-700">Attendance goes here...</p>
+
+<div class="flex gap-4 flex-wrap pr-2">
+
+  <div class="p-4 bg-white rounded-2xl shadow w-[200px]">
+    <p class="text-zinc-800 text-lg font-semibold mb-5">Math</p>
+    <div class="w-full bg-zinc-200 h-2 rounded">
+      <div class="h-full bg-green-600 w-[85%] rounded"></div>
+    </div>
+    <p class="text-right font-bold text-green-600">85%</p>
+  </div>
+
+  <div class="p-4 bg-white rounded-2xl shadow w-[200px]">
+    <p class="text-zinc-800 text-lg font-semibold mb-5">Physics</p>
+    <div class="w-full bg-zinc-200 h-2 rounded">
+      <div class="h-full bg-green-600 w-[92%] rounded"></div>
+    </div>
+    <p class="text-right font-bold text-green-600">92%</p>
+  </div>
+
+  <div class="p-4 bg-white rounded-2xl shadow w-[200px]">
+    <p class="text-zinc-800 text-lg font-semibold mb-5">Physics</p>
+    <div class="w-full bg-zinc-200 h-2 rounded">
+      <div class="h-full bg-green-600 w-[92%] rounded"></div>
+    </div>
+    <p class="text-right font-bold text-green-600">92%</p>
+  </div>
+
+  <div class="p-4 bg-white rounded-2xl shadow w-[200px]">
+    <p class="text-zinc-800 text-lg font-semibold mb-5">Physics</p>
+    <div class="w-full bg-zinc-200 h-2 rounded">
+      <div class="h-full bg-green-600 w-[92%] rounded"></div>
+    </div>
+    <p class="text-right font-bold text-green-600">92%</p>
+  </div>
+</div>
 `,
 
 todo : `
