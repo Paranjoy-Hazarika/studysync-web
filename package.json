@@ -6,10 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview",
-    "server": "node backend/server.js",
-    "server:dev": "nodemon backend/server.js",
-    "start": "concurrently \"npm run server:dev\" \"npm run dev\""
+    "preview": "vite preview"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.1.17",
