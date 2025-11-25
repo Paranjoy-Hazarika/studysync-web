@@ -46,7 +46,7 @@ cards.forEach(card => {
         const newFile = document.querySelector(".files-section");
         const addFileHtml = `
           <div id="add-file" class="-mt-5 hover:cursor-pointer min-w-[50px] text-center" title="Add new">
-            <i class="bi bi-plus-circle w- 50 text-zinc-800 text-[30px] hover:text-zinc-500 transition-all duration-300"></i>;
+            <i class="bi bi-plus-circle w- 50 text-zinc-800 text-[30px] hover:text-zinc-500 transition-all duration-300"></i>
           </div>
         `;
         newFile.insertAdjacentHTML("beforeend", addFileHtml);
