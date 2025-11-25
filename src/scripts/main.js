@@ -51,11 +51,21 @@ cards.forEach(card => {
         `;
         newFile.insertAdjacentHTML("beforeend", addFileHtml);
 
+        const addButton = document.getElementById("add-file")
+        addButton.addEventListener("click", () => {
+          alert("Will be added soon...")
+        })
+
         break
       
       case "classes":
         overlayWindow.classList.add("layout-schedule");
         overlayWindow.innerHTML = innerContent;
+
+        const dayBtn = document.getElementById("day")
+        dayBtn.addEventListener("click", () => {
+          alert("Will be added soon...")
+        })
 
         break
 
@@ -63,11 +73,23 @@ cards.forEach(card => {
         overlayWindow.classList.add("layout-attendance");
         overlayWindow.innerHTML = innerContent;
 
+        const classBtn = document.getElementById("attendance-card")
+        classBtn.addEventListener("click", () => {
+          alert("Will be added soon...")
+        })
+
         break
 
       case "todo":
         overlayWindow.classList.add("layout-todo");
         overlayWindow.innerHTML = innerContent;
+
+        const todoBtn = document.getElementById("todo-form")
+        todoBtn.addEventListener("submit", (e) => {
+          e.preventDefault();
+          
+          alert("Will be added soon...")
+        })
 
         break
     }
